@@ -18,4 +18,5 @@ print(quote_blocks)
 for block in quote_blocks:
     text = block.select_one(".text").get_text(strip=True)      # the quote text
     author = block.select_one(".author").get_text(strip=True)  # the author name
+    tags = block.select_one(".tags").get_text(strip=True)
     print(f"— {text}  ({author})")
